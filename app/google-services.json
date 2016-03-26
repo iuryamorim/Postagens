@@ -1,0 +1,43 @@
+{
+  "project_info": {
+    "project_id": "postagem-4018b",
+    "project_number": "416108522955",
+    "name": "Postagem"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416108522955:android:3c7f199fd253afb2",
+        "client_id": "android:iuryamorim.postagem",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "iuryamorim.postagem",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 1,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 1
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}
