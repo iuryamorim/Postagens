@@ -72,6 +72,8 @@ public class VideoFullscreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_fullscreen);
 
+        getSupportActionBar().setTitle("Vídeo");
+
         URL = getIntent().getExtras().getString("url");
 
         mVisible = true;
@@ -90,7 +92,7 @@ public class VideoFullscreenActivity extends AppCompatActivity {
         view = (VideoView) findViewById(R.id.videoView);
         pd = new ProgressDialog(this);
 
-        pd.setTitle("Video teste");
+        pd.setTitle("Vídeo");
         pd.setMessage("Carregando...");
         pd.setIndeterminate(false);
         pd.setCancelable(false);

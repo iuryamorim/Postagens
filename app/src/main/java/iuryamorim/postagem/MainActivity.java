@@ -115,12 +115,12 @@ public class MainActivity extends AppCompatActivity {
 
     public List<Video> getSetVideoList(int qtd) {
 
-        String[] tituloCardVideo = new String[]{"Gallardo", "Vyron", "Corvette", "Pagani Zonda", "Porsche 911 Carrera", "BMW 720i", "DB77", "Mustang", "Camaro", "CT6"};
-        String[] descricaoCardVideo = new String[]{"Lamborghini", " bugatti", "Chevrolet", "Pagani", "Porsche", "BMW", "Aston Martin", "Ford", "Chevrolet", "Cadillac"};
-        String[] urlCardVideo = new String[]{"http://sample.vodobox.net/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8", "http://devimages.apple.com/iphone/samples/bipbop/gear1/prog_index.m3u8", "http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch1/appleman.m3u8", "http://sample.vodobox.net/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8", "http://devimages.apple.com/iphone/samples/bipbop/gear1/prog_index.m3u8", "http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch1/appleman.m3u8", "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8", "http://playertest.longtailvideo.com/adaptive/captions/playlist.m3u8", "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8", "http://walterebert.com/playground/video/hls/sintel-trailer.m3u8", "http://cdn-fms.rbs.com.br/hls-vod/sample1_1500kbps.f4v.m3u8", "http://www.nacentapps.com/m3u8/index.m3u8"};
-        int[] fotoCardVideo = new int[]{R.mipmap.artigo1, R.mipmap.artigo2, R.mipmap.artigo3, R.mipmap.artigo4, R.mipmap.artigo5, R.mipmap.artigo6, R.mipmap.artigo7, R.mipmap.artigo8, R.mipmap.artigo9, R.mipmap.artigo10};
+        String[] tituloCardVideo = new String[]{"Skate","Flores","Bip! Bop!","Apple","Gatos","Robôs","Sintel","Big Bunny","Animais","Oceans"};
+        String[] descricaoCardVideo = new String[]{"Clip de Skate","Veja essas\nlindas flores","Teste BipBot","Conferência\napple 2010","Comercial de ração\npra gatos","Curta metragem\nfuturista","Game sintel","Curta Big buck bunny","Vida Animal","Oceans da disney"};
+        String[] urlCardVideo = new String[]{"http://sample.vodobox.net/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8","http://cdn-fms.rbs.com.br/hls-vod/sample1_1500kbps.f4v.m3u8","http://devimages.apple.com/iphone/samples/bipbop/gear1/prog_index.m3u8","http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8","http://playertest.longtailvideo.com/adaptive/captions/playlist.m3u8","http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8","http://walterebert.com/playground/video/hls/sintel-trailer.m3u8","http://www.nacentapps.com/m3u8/index.m3u8","http://playertest.longtailvideo.com/adaptive/wowzaid3/playlist.m3u8","http://playertest.longtailvideo.com/adaptive/oceans_aes/oceans_aes.m3u8"};
+        int[] fotoCardVideo = new int[]{R.mipmap.video1, R.mipmap.video2, R.mipmap.video3, R.mipmap.video4, R.mipmap.video5, R.mipmap.video6, R.mipmap.video7, R.mipmap.video8, R.mipmap.video9, R.mipmap.video10};
         int[] positon = new int[]{0,1,2,3,4,5,6,7,8,9};
-        String[]tags = new String[]{"klm,opk,okp,k","kml,k,okp,kl","opk,kml,kl,kj","a1,ao,m,a","a5,ao,m,a","a6,ao,m,a","a7,ao,m,a","a8,ao,m,a","a9,ao,m,a","a10,ao,m,a",};
+        String[]tags = new String[]{"skate,bitbop,flores,sintel","flores,apple,bunny,gatos","bitbop,animais,apple,robos","apple,skate,oceans,robos","gatos,bitbop,sintel,bunny","robos,flores,apple,gatos","sintel,animais,robos,skate","bunny,flores,bitbop,apple","animais,sintel,gatos,oceans","oceans,sintel,animais,gatos"};
 
         List<Video> listAux = new ArrayList<>();
 

@@ -45,26 +45,25 @@ public class VideoRelAdapter extends RecyclerView.Adapter<VideoRelAdapter.MyView
         tamanho = 10;
         int pos = VideoActivity.click;
         String[] tagPosition = mList.get(pos).getTags().split(",");
-        int cont = 0, conta,c2=0;
+        int cont = 0, conta, c2 = 0;
         while (c2 < 10) {
             String[] auxPosition = mList.get(cont).getTags().split(",");
             conta = 0;
             for (int i = 0; i < 4; i++) {
-                for (int j = 0; j < 4; j++) {
-                    String a =tagPosition[i];
-                    String b = auxPosition[j];
-                    if (a.equals(b)) {
-                        if (cont != pos) {
-                            conta++;
-                        }
+                String a = tagPosition[0];
+                String b = auxPosition[i];
+                if (a.equals(b)) {
+                    if (cont != pos) {
+                        conta++;
                     }
                 }
             }
             if (conta != 0) {
-                Video v = new Video(mList.get(cont).getTitulo(),mList.get(cont).getDescricao(),mList.get(cont).getUrl(),mList.get(cont).getFoto());
+                Video v = new Video(mList.get(cont).getTitulo(), mList.get(cont).getDescricao(), mList.get(cont).getUrl(), mList.get(cont).getFoto());
                 mListAux.add(v);
 
-            } cont++;
+            }
+            cont++;
             c2++;
         }
         tamanho = mListAux.size();
