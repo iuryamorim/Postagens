@@ -8,7 +8,6 @@ public class Video implements Serializable {
     private String titulo;
     private String descricao;
     private String url;
-    private String tag;
     private int foto;
     private int position;
     private String tags;
@@ -36,15 +35,6 @@ public class Video implements Serializable {
     public void setPosition(int position) {
         this.position = position;
     }
-
-    public String getTag() {
-        return tag;
-    }
-
-    public void setTag(String tag) {
-        this.tag = tag;
-    }
-
     public String getTitulo() {
         return titulo;
     }

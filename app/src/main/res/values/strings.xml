@@ -6,4 +6,6 @@
     <string name="title_activity_video_fullscreen">VideoFullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="search_hint">Pesquisa</string>
+    <string name="action_searchable_activity">Pesquisa</string>
 </resources>
