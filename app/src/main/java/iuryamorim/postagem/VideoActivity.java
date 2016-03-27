@@ -56,13 +56,11 @@ public class VideoActivity extends AppCompatActivity {
         btn = (Button) findViewById(R.id.btnVideo);
 
         ImageView fotoCardVideo = (ImageView) findViewById(R.id.fotoCardVideo);
-        TextView titleCardVideo = (TextView) findViewById(R.id.titleCardVideo);
+        String titleCardVideo = video.getTitulo();
 
 
         fotoCardVideo.setImageResource(video.getFoto());
-        titleCardVideo.setText(video.getTitulo());
-
-        getSupportActionBar().setTitle(titleCardVideo.getText().toString());
+        getSupportActionBar().setTitle(titleCardVideo);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

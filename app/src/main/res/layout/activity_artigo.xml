@@ -10,7 +10,6 @@
     tools:context="iuryamorim.postagem.ArtigoActivity">
 
     <ScrollView
-        android:layout_below="@+id/tb_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
@@ -32,13 +31,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Compartilhar"
-                android:onClick="compartilhar"
-                android:id="@+id/compartilhar"/>
 
             <TextView
                 android:layout_below="@+id/fotoCardArtigo"

@@ -23,7 +23,7 @@ import iuryamorim.postagem.interfaces.RecyclerViewOnClickListenerHack;
 
 public class VideoRelAdapter extends RecyclerView.Adapter<VideoRelAdapter.MyViewHolder> {
     private List<Video> mList;
-    public  List<Video> mListAux;
+    public static List<Video> mListAux;
     private LayoutInflater mLayoutInflater;
     private RecyclerViewOnClickListenerHack mRecyclerViewOnClickListenerHack;
     private int tamanho = 10;

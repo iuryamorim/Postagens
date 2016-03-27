@@ -17,7 +17,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v7.widget.SearchView;
 
-import com.google.android.gms.appinvite.AppInviteReferral;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -38,16 +37,9 @@ public class MainActivity extends AppCompatActivity {
     private List<Video> listVideos;
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    public static final int REQUEST_INVITE = 78;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if(savedInstanceState == null){
-            if (AppInviteReferral.hasReferral((getIntent()))){
-                launchInviteCall(getIntent());
-            }
-        }
 
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -139,51 +131,6 @@ public class MainActivity extends AppCompatActivity {
         return (listAux);
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        registerInvitReceiver();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        unregisterInvitReceiver();
-    }
-
-    private BroadcastReceiver mInviteReceiver;
-
-    private void registerInvitReceiver(){
-        mInviteReceiver = new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                if (AppInviteReferral.hasReferral(intent)){
-                    launchInviteCall(intent);
-                }
-            }
-        };
-        LocalBroadcastManager.getInstance(this).registerReceiver(mInviteReceiver, new IntentFilter("deepLink"));
-    }
-
-    private  void unregisterInvitReceiver(){
-        if(mInviteReceiver == null){
-            LocalBroadcastManager.getInstance(this).unregisterReceiver(mInviteReceiver);
-        }
-    }
-
-    private void launchInviteCall(Intent intent){
-        Intent it = new Intent(intent).setClass(this, ArtigoActivity.class);
-
-        for (int i = 0, tamI = listArtigos.size();  i < tamI; i++){
-            if (intent.toString().indexOf(listArtigos.get(i).getSubTitulo()) > -1){
-                if (intent.toString().indexOf(listArtigos.get(i).getTitulo()) > -1) {
-                    it.putExtra("artigo", listArtigos.get(i));
-                    break;
-                }
-            }
-        }
-        startActivity(it);
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -16,24 +16,18 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="10dp" />
+        android:layout_alignParentTop="true"/>
 
     <Button
         android:id="@+id/btnVideo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/branco"
+        android:background="@color/colorPrimaryDark"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="Play" />
 
-    <TextView
-        android:id="@+id/titleCardVideo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/fotoCardVideo"
-        android:textColor="@color/colorPrimaryText"
-        android:textSize="18sp" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPagerVideo"

@@ -12,8 +12,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.android.gms.appinvite.AppInviteInvitation;
-
 import iuryamorim.postagem.domain.Artigo;
 
 public class ArtigoActivity extends AppCompatActivity {
@@ -45,33 +43,6 @@ public class ArtigoActivity extends AppCompatActivity {
         subTitleCardArtigo.setText(artigo.getSubTitulo());
         textoCardArtigo.setText(artigo.getTexto());
 
-       // getSupportActionBar().setTitle(titleCardArtigo.getText().toString());
-
-        Button comp = (Button) findViewById(R.id.compartilhar);
-    }
-
-    public void compartilhar(View v){
-        inviteCall();
-    }
-
-    private  void inviteCall(){
-        Intent intent = new AppInviteInvitation.IntentBuilder("Postagem")
-                .setMessage("Veja as nossa postagem!")
-                .setDeepLink(Uri.parse(artigo.getSubTitulo() + "/" + artigo.getTitulo()))
-                .build();
-       // startActivity(intent);
-
-        startActivityForResult(intent, MainActivity.REQUEST_INVITE);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == MainActivity.REQUEST_INVITE){
-            if (resultCode == RESULT_OK){
-                String ids[] = AppInviteInvitation.getInvitationIds(resultCode,data);
-            }
-        }
     }
 
     @Override

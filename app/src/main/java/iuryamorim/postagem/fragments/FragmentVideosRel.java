@@ -17,10 +17,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import iuryamorim.postagem.MainActivity;
 import iuryamorim.postagem.R;
 import iuryamorim.postagem.VideoActivity;
-import iuryamorim.postagem.adapter.VideoAdapter;
 import iuryamorim.postagem.adapter.VideoRelAdapter;
 import iuryamorim.postagem.domain.Video;
 import iuryamorim.postagem.interfaces.RecyclerViewOnClickListenerHack;
@@ -56,12 +54,14 @@ public class FragmentVideosRel extends Fragment  implements RecyclerViewOnClickL
 
     @Override
     public void onClickListener(View view, int position) {
-        Intent i = new Intent(getActivity(), VideoActivity.class);
-        Video video = new Video(mList.get(position).getTitulo(),mList.get(position).getDescricao(),mList.get(position).getUrl(),mList.get(position).getFoto(),mList.get(position).getTags(),position);
-        List<Video> mLista = new ArrayList<>();
-        mLista.add(video);
-        i.putExtra("video", (Serializable) mLista);
-        getActivity().startActivity(i);
+        List<Video> listAux = VideoRelAdapter.mListAux;
+        for (int j = 0, tamI = mList.size(); j < tamI; j++) {
+            if (mList.get(j).getTitulo().toLowerCase().startsWith(listAux.get(position).getTitulo().toLowerCase())) {
+                Intent i = new Intent(getActivity(), VideoActivity.class);
+                i.putExtra("video", mList.get(j));
+                getActivity().startActivity(i);
+            }
+        }
     }
 
     private static class RecycleViewTouchListener implements RecyclerView.OnItemTouchListener {
